@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?xml-model href="fxml-text-counter.rng"?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxtextcounter.FXMLTextCounterController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TextArea fx:id="textContent" prefHeight="200.0" prefWidth="200.0" />
+   <Button fx:id="updateText" mnemonicParsing="false" onAction="#calculateTextCount" text="Calculate text count" />
+   <Label fx:id="textCountResult" text="Characters: 0&#10;Words: 0&#10;Lines: 0" />
+</VBox>
