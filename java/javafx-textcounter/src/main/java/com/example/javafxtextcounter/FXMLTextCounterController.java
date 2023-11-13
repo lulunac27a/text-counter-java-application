@@ -10,10 +10,11 @@ public class FXMLTextCounterController {
     public Button updateText;
     public Label textCountResult;
 
-    public void calculateTextCount(ActionEvent actionEvent) {
-        int chars = textContent.getLength();
-        int words = textContent.getText().trim().split("\\s+").length;
-        int lines = textContent.getText().split("\\r?\\n").length;
-        textCountResult.setText("Characters: " + chars + "\nWords: " + words + "\nLines: " + lines);
+    public void calculateTextCount(ActionEvent actionEvent) {// update text count result when button is clicked
+        int chars = textContent.getLength();// get length of text area in characters
+        int words = textContent.getText().trim().split("\\s+").length;// get length of text area in words
+        int lines = textContent.getText().split("\\r?\\n").length;// get length of text area in lines
+        textCountResult.setText("Characters: " + chars + "\nWords: " + words + "\nLines: " + lines);// update text count
+                                                                                                    // output
     }
 }
