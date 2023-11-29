@@ -26,7 +26,7 @@ class KotlinTextCounterJavaFX : Application() {
                                 EventHandler { event: ActionEvent?
                                         -> // calculate text count when button is clicked
                                         val chars = textContent.length // get length of text
-                                        // area in characters
+                                                                // area in characters
                                         val words =
                                                         textContent.text
                                                                         .trim { it <= ' ' }
@@ -36,7 +36,7 @@ class KotlinTextCounterJavaFX : Application() {
                                                                         }
                                                                         .toTypedArray()
                                                                         .size // get length of text
-                                        // area in words
+                                                                        // area in words
                                         val lines =
                                                         textContent.text
                                                                         .split("\\r?\\n".toRegex())
@@ -45,11 +45,10 @@ class KotlinTextCounterJavaFX : Application() {
                                                                         }
                                                                         .toTypedArray()
                                                                         .size // get length of text
-                                        // area in lines
+                                                                        // area in lines
                                         textCountResult.text =
-                                                        "Characters: $chars\nWords: $words\nLines: $lines" // update text count
-                                        // output
-                                }
+                                                        "Characters: $chars\nWords: $words\nLines: $lines" // update text count output
+                }
                 root.children.addAll(
                                 textContent,
                                 updateText,
