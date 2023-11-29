@@ -6,17 +6,17 @@ import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
 
-class KotlinFXMLTextCounterApplication : Application() {
+class KotlinFXMLFileTextCounterApplication : Application() {
     @Throws(IOException::class)
     override fun start(stage: Stage) {
         val fxmlLoader =
                 FXMLLoader(
-                        KotlinFXMLTextCounterApplication::class.java.getResource(
-                                "kotlin-fxml-text-counter.fxml"
+                        KotlinFXMLFileTextCounterApplication::class.java.getResource(
+                                "kotlin-fxml-file-text-counter.fxml"
                         )
                 ) // load FXML file resource
         val scene = Scene(fxmlLoader.load(), 480.0, 320.0) // set application size to 480x320
-        stage.title = "Text Counter" // set title of stage
+        stage.title = "Text Counter from a File" // set title of stage
         stage.setScene(scene) // set stage to scene
         stage.show() // show the stage
     }
@@ -25,7 +25,7 @@ class KotlinFXMLTextCounterApplication : Application() {
         @JvmStatic
         fun main(args: Array<String>) {
             launch(
-                    KotlinFXMLTextCounterApplication::class.java
+                    KotlinFXMLFileTextCounterApplication::class.java
             ) // launch the application by running the program
         }
     }

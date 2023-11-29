@@ -9,7 +9,7 @@ class textCounter {
 
     init {
         val textCount: Frame =
-                JFrame("Text Counter Application") // initalize frame and set title of frame
+                JFrame("Text Counter Application") // initialize frame and set title of frame
         textCount.setLayout(FlowLayout())
         textCount.setSize(480, 320) // set application size to 480x320
         textContent = JTextArea(10, 80) // create text area with 10 rows and 80 columns
@@ -38,7 +38,7 @@ class textCounter {
                             .size // get length of text area in lines
             textCountResult.setText(
                     "Characters: $chars\nWords: $words\nLines: $lines"
-            ) // update text count output
+            ) // update text counter output
         }
     }
 

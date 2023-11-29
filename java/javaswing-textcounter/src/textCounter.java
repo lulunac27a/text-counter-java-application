@@ -9,7 +9,7 @@ public class textCounter {
     JLabel textCountResult;
 
     public textCounter() {
-        Frame textCount = new JFrame("Text Counter Application");// initalize frame and set title of frame
+        Frame textCount = new JFrame("Text Counter Application");// initialize frame and set title of frame
         textCount.setLayout(new FlowLayout());
         textCount.setSize(480, 320);// set application size to 480x320
         textContent = new JTextArea(10, 80);// create text area with 10 rows and 80 columns

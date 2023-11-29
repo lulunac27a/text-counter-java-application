@@ -6,9 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 public class FXMLTextCounterController {
-    public TextArea textContent;
-    public Button updateText;
-    public Label textCountResult;
+    public TextArea textContent;// text box area
+    public Button updateText;// button to update entered text from text box
+    public Label textCountResult;// text counter output result
 
     public void calculateTextCount(ActionEvent actionEvent) {// update text count result when button is clicked
         int chars = textContent.getLength();// get length of text area in characters

@@ -1,3 +1,4 @@
 # Ignored files
 **/.DS_Store
 groovy/javaswing-textcounter-groovy/lib/*
+*/*/.idea/easycode/*
