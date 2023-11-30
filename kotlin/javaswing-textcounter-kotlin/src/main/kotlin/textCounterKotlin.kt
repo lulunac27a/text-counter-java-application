@@ -2,10 +2,10 @@ import java.awt.FlowLayout
 import java.awt.Frame
 import javax.swing.*
 
-class textCounter {
-    var textContent: JTextArea
-    var updateText: JButton
-    var textCountResult: JLabel
+class textCounterKotlin {
+    private var textContent: JTextArea
+    private var updateText: JButton
+    private var textCountResult: JLabel
 
     init {
         val textCount: Frame =
@@ -16,10 +16,12 @@ class textCounter {
         textCount.add(textContent) // add components to the frame
         updateText = JButton("Calculate text count")
         textCount.add(updateText)
-        textCountResult = JLabel("Characters: 0\nWords: 0\nLines: 0")
+        textCountResult =
+                JLabel("Characters: 0\nWords: 0\nLines: 0") // set the default text counter output
         textCount.add(textCountResult)
         textCount.isVisible = true // make the frame visible
-        updateText.addActionListener { // when button is clicked
+        updateText.addActionListener {
+            // when button is clicked
             val chars = textContent.getText().length // get length of text area in characters
             val words =
                     textContent
@@ -46,7 +48,7 @@ class textCounter {
         @JvmStatic
         fun main(args: Array<String>) {
             SwingUtilities.invokeLater {
-                textCounter() // launch the application by running the program
+                textCounterKotlin() // launch the application by running the program
             }
         }
     }
