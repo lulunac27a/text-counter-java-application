@@ -1,5 +1,7 @@
 package com.example.javafxtextcountergroovy
 
+import java.io.*
+
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.control.Button
@@ -22,9 +24,9 @@ class GroovyFileTextCounterJavaFX extends Application {
         primaryStage.setScene(scene)// set the scene
         primaryStage.setTitle("Text Counter Application")// set the title of stage
 
-        Label textCountResult = new Label("Characters: 0\nWords: 0\nLines: 0")// set the default text count output
+        Label textCountResult = new Label("Characters: 0\nWords: 0\nLines: 0")// set the default text counter output
         selectFile.setOnAction((event) -> {
-            String textContent = ""// initalize empty text content string
+            String textContent = ""// initialize empty text content string
             FileChooser fileChooser = new FileChooser()// create a new file chooser
             fileChooser.setTitle("Select a file")
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"))// choose

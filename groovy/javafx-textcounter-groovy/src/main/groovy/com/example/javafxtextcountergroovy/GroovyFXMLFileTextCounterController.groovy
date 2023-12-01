@@ -6,13 +6,13 @@ import javafx.scene.control.Label
 import javafx.stage.FileChooser
 
 class GroovyFXMLFileTextCounterController {
-    public Button selectFile// button to select file
-    public Label textCountResult// text count output result
+    Button selectFile// button to select file
+    Label textCountResult// text counter output result
     static BufferedReader reader = null// initialize reader
-    String textContent = ""// initalize empty text content string
+    String textContent = ""// initialize empty text content string
 
     void calculateTextCount(ActionEvent actionEvent) {
-        String textContent = ""// initalize empty text content string
+        String textContent = ""// initialize empty text content string
         FileChooser fileChooser = new FileChooser()// create a new file chooser
         fileChooser.setTitle("Select a file")
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"))// choose .txt
