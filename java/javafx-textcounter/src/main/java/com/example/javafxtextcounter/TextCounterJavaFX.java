@@ -19,7 +19,7 @@ public class TextCounterJavaFX extends Application {
         Scene scene = new Scene(root, 480, 320);// set the application size to 480x320
         primaryStage.setScene(scene);// set the scene
         primaryStage.setTitle("Text Counter Application");// set title of stage
-        TextArea textContent = new TextArea();
+        TextArea textContent = new TextArea();// text box area
         Button updateText = new Button("Calculate text count");
         Label textCountResult = new Label("Characters: 0\nWords: 0\nLines: 0");// set to default text counter output
         updateText.setOnAction((event) -> {// calculate text count when button is clicked

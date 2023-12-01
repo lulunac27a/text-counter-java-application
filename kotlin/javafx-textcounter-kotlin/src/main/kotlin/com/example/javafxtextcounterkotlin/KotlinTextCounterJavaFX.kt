@@ -16,7 +16,7 @@ class KotlinTextCounterJavaFX : Application() {
                 val scene = Scene(root, 480.0, 320.0) // set the application size to 480x320
                 primaryStage.setScene(scene) // set the scene
                 primaryStage.title = "Text Counter Application" // set title of stage
-                val textContent = TextArea()
+                val textContent = TextArea() // text box area
                 val updateText = Button("Calculate text count")
                 val textCountResult =
                                 Label(
