@@ -1,0 +1,2 @@
+# Text Counter Application in Java, Kotlin and Groovy
+This repository contains text counter applications for Java, Kotlin and Groovy. All files in this repository have Java Swing and JavaFX versions of the text counter applications and it can calculate the character, word and line counts for entered text box area and the uploaded text files. JavaFX files are available in both JavaFX code and FXML files.
