@@ -30,6 +30,6 @@ class KotlinFXMLTextCounterController {
             .toTypedArray()
             .size // get length of text area in lines
     textCountResult!!.text = "Characters: $chars\nWords: $words\nLines: $lines" // update text
-    // counter output
+                                                                                // counter output
   }
 }

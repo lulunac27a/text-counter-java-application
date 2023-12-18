@@ -31,14 +31,14 @@ class KotlinTextCounterJavaFX : Application() {
                   .dropLastWhile { it.isEmpty() }
                   .toTypedArray()
                   .size // get length of text
-          // area in words
+                        // area in words
           val lines =
               textContent.text
                   .split("\\r?\\n".toRegex())
                   .dropLastWhile { it.isEmpty() }
                   .toTypedArray()
                   .size // get length of text
-          // area in lines
+                        // area in lines
           textCountResult.text =
               "Characters: $chars\nWords: $words\nLines: $lines" // update text count output
     }
