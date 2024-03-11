@@ -28,10 +28,10 @@ class GroovyFXMLFileTextCounterController {
                 throw new RuntimeException(e)// throw runtime exception
             }
         }
-        int chars = textContent.length()// get length of opened text file in characters
-        int words = textContent.trim().split("\\s+").length// get length of opened text file in words
-        int lines = textContent.trim().split("\\r?\\n").length// get length of opened text file in lines
-        textCountResult.setText("Characters: " + chars + "\nWords: " + words + "\nLines: " + lines)// update text
-                                                                                                // counter output
+        int chars = textContent.length()// get the length of opened text file in characters
+        int words = textContent.trim().split("\\s+").length// get the length of opened text file in words
+        int lines = textContent.trim().split("\\r?\\n").length// get the length of opened text file in lines
+        textCountResult.setText("Characters: " + String.format("%,d", chars) + "\nWords: " + String.format("%,d", words)
+                + "\nLines: " + String.format("%,d", lines))// update text counter output
     }
 }

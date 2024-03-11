@@ -15,8 +15,8 @@ public class FXMLTextCounterApplication extends Application {
                                                                                                                        // file
                                                                                                                        // resource
         Scene scene = new Scene(fxmlLoader.load(), 480, 320);// set application size to 480x320
-        stage.setTitle("Text Counter");// set title of stage
-        stage.setScene(scene);// set stage to scene
+        stage.setTitle("Text Counter");// set the title of stage
+        stage.setScene(scene);// set the stage to a scene
         stage.show();// show the stage
     }
 

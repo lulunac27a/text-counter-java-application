@@ -12,7 +12,7 @@ public class textCounter {
         Frame textCount = new JFrame("Text Counter Application");// initialize frame and set title of frame
         textCount.setLayout(new FlowLayout());
         textCount.setSize(480, 320);// set application size to 480x320
-        textContent = new JTextArea(10, 80);// create text area with 10 rows and 80 columns
+        textContent = new JTextArea(10, 40);// create text area with 10 rows and 40 columns
         textCount.add(textContent);// add components to the frame
         updateText = new JButton("Calculate text count");
         textCount.add(updateText);
@@ -21,14 +21,13 @@ public class textCounter {
         textCount.setVisible(true);// make the frame visible
         updateText.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {// when button is clicked
-                int chars = textContent.getText().length();// get length of text area in characters
-                int words = textContent.getText().trim().split("\\s+").length;// get length of text area in words
-                int lines = textContent.getText().split("\\r?\\n").length;// get length of text area in lines
-                textCountResult.setText("Characters: " + chars + "\nWords: " + words + "\nLines: " + lines);// update
-                                                                                                            // text
-                                                                                                            // count
-                                                                                                            // output
+            public void actionPerformed(ActionEvent e) {// when the button is clicked
+                int chars = textContent.getText().length();// get the length of text area in characters
+                int words = textContent.getText().trim().split("\\s+").length;// get the length of text area in words
+                int lines = textContent.getText().split("\\r?\\n").length;// get the length of text area in lines
+                textCountResult.setText("Characters: " + String.format("%,d", chars) + "\nWords: "
+                        + String.format("%,d", words) + "\nLines: " + String.format("%,d", lines));// update text
+                                                                                                   // counter output
             }
         });
     }

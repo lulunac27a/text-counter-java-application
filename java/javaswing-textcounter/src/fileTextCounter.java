@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class fileTextCounter {
     JButton selectFile = new JButton("Select file");
@@ -20,6 +21,7 @@ public class fileTextCounter {
             @Override
             public void actionPerformed(ActionEvent e) {// when button is clicked
                 JFileChooser fileChooser = new JFileChooser();// create a new file chooser
+                fileChooser.setFileFilter(new FileNameExtensionFilter("Text files", "txt"));
                 int fileResult = fileChooser.showOpenDialog(textCount);// show file dialog
                 final String textContent;
                 try {
@@ -27,13 +29,12 @@ public class fileTextCounter {
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-                int chars = textContent.length();// get length of text area in characters
-                int words = textContent.trim().split("\\s+").length;// get length of text area in words
-                int lines = textContent.split("\\r?\\n").length;// get length of text area in lines
-                textCountResult.setText("Characters: " + chars + "\nWords: " + words + "\nLines: " + lines);// update
-                                                                                                            // text
-                                                                                                            // count
-                                                                                                            // output
+                int chars = textContent.length();// get the length of text area in characters
+                int words = textContent.trim().split("\\s+").length;// get the length of text area in words
+                int lines = textContent.split("\\r?\\n").length;// get the length of text area in lines
+                textCountResult.setText("Characters: " + String.format("%,d", chars) + "\nWords: "
+                        + String.format("%,d", words) + "\nLines: " + String.format("%,d", lines));// update text
+                                                                                                   // counter output
             }
 
             private static String getTextContent(int fileResult, JFileChooser fileChooser) throws IOException {
