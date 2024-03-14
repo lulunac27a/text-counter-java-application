@@ -34,15 +34,15 @@ class fileTextCounterKotlin {
                         } catch (ex: IOException) {
                             throw RuntimeException(ex)
                         }
-                        val chars = textContent.length // get the length of text area in characters
-                        val words =
+                        val chars: Int = textContent.length // get the length of text area in characters
+                        val words: Int =
                                 textContent
                                         .trim { it <= ' ' }
                                         .split("\\s+".toRegex())
                                         .dropLastWhile { it.isEmpty() }
                                         .toTypedArray()
                                         .size // get the length of text area in words
-                        val lines =
+                        val lines: Int =
                                 textContent
                                         .split("\\r?\\n".toRegex())
                                         .dropLastWhile { it.isEmpty() }

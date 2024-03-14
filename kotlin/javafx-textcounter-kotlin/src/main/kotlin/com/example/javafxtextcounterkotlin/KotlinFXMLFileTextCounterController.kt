@@ -33,15 +33,15 @@ class KotlinFXMLFileTextCounterController {
                 throw RuntimeException(e) // throw runtime exception
             }
         }
-        val chars = textContent.length // get the length of opened text file in characters
-        val words =
+        val chars: Int = textContent.length // get the length of opened text file in characters
+        val words: Int =
                 textContent
                         .trim { it <= ' ' }
                         .split("\\s+".toRegex())
                         .dropLastWhile { it.isEmpty() }
                         .toTypedArray()
                         .size // get the length of opened text file in words
-        val lines =
+        val lines: Int =
                 textContent
                         .trim { it <= ' ' }
                         .split("\\r?\\n".toRegex())

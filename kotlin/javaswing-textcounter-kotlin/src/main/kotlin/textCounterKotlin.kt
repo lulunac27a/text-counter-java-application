@@ -22,8 +22,8 @@ class textCounterKotlin {
         textCount.isVisible = true // make the frame visible
         updateText.addActionListener {
             // when the button is clicked
-            val chars = textContent.text.length // get the length of text area in characters
-            val words =
+            val chars: Int = textContent.text.length // get the length of text area in characters
+            val words: Int =
                     textContent
                             .text
                             .trim { it <= ' ' }
@@ -31,7 +31,7 @@ class textCounterKotlin {
                             .dropLastWhile { it.isEmpty() }
                             .toTypedArray()
                             .size // get the length of text area in words
-            val lines =
+            val lines: Int =
                     textContent
                             .text
                             .split("\\r?\\n".toRegex())

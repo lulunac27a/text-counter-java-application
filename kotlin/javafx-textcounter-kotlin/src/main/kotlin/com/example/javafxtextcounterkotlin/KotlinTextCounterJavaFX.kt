@@ -22,8 +22,8 @@ class KotlinTextCounterJavaFX : Application() {
                 Label("Characters: 0\nWords: 0\nLines: 0") // set to default text counter output
         updateText.onAction =
                 EventHandler { event: ActionEvent? -> // calculate text count when button is clicked
-                    val chars = textContent.length // get the length of text area in characters
-                    val words =
+                    val chars: Int = textContent.length // get the length of text area in characters
+                    val words: Int =
                             textContent
                                     .text
                                     .trim { it <= ' ' }
@@ -31,7 +31,7 @@ class KotlinTextCounterJavaFX : Application() {
                                     .dropLastWhile { it.isEmpty() }
                                     .toTypedArray()
                                     .size // get the length of text area in words
-                    val lines =
+                    val lines: Int =
                             textContent
                                     .text
                                     .split("\\r?\\n".toRegex())

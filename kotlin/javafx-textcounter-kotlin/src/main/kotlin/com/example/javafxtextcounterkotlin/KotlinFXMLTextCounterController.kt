@@ -13,8 +13,8 @@ class KotlinFXMLTextCounterController {
     fun calculateTextCount(
             actionEvent: ActionEvent?
     ) { // update a text count result when button is clicked
-        val chars = textContent!!.length // get the length of text area in characters
-        val words =
+        val chars: Int = textContent!!.length // get the length of text area in characters
+        val words: Int =
                 textContent!!
                         .text
                         .trim { it <= ' ' }
@@ -22,7 +22,7 @@ class KotlinFXMLTextCounterController {
                         .dropLastWhile { it.isEmpty() }
                         .toTypedArray()
                         .size // get the length of text area in words
-        val lines =
+        val lines: Int =
                 textContent!!
                         .text
                         .split("\\r?\\n".toRegex())
