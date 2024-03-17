@@ -47,7 +47,7 @@ class GroovyFileTextCounterJavaFX extends Application {
                     + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines))// update text counter
                                                                                               // output
         })
-        root.children().addAll(selectFile, textCountResult)// add all components to the stage
+        root.children.addAll(selectFile, textCountResult)// add all components to the stage
         primaryStage.show()// show the stage
     }
 
