@@ -10,6 +10,9 @@ import java.io.IOException
 
 class GroovyFXMLTextCounterApplication extends Application {
 
+    static void main(String[] args) {
+        launch()// launch the application by running the program
+    }
     @Override
     void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GroovyFXMLTextCounterApplication.getResource('fxml-text-counter-groovy.fxml'))// load
@@ -20,10 +23,6 @@ class GroovyFXMLTextCounterApplication extends Application {
         stage.title = 'Text Counter'// set the title of stage
         stage.scene = scene// set the stage to a scene
         stage.show()// show the stage
-    }
-
-    static void main(String[] args) {
-        launch()// launch the application by running the program
     }
 
 }
