@@ -16,8 +16,8 @@ class GroovyFXMLFileTextCounterController {
         String textContent = ''// initialize empty text content string
         FileChooser fileChooser = new FileChooser()// create a new file chooser
         fileChooser.title = 'Select a file'
-        fileChooser.extensionFilters().addAll(new FileChooser.ExtensionFilter('Text Files', '*.txt'))// choose .txt
-                                                                                                     // text files
+        fileChooser.extensionFilters.addAll(new FileChooser.ExtensionFilter('Text Files', '*.txt'))// choose .txt
+                                                                                                   // text files
         File fileSelected = fileChooser.showOpenDialog(null)// show file dialog
         if (fileSelected != null) {
             try (BufferedReader reader = new BufferedReader(new FileReader(fileSelected))) {
