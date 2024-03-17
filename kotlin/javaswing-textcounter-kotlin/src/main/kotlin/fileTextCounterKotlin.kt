@@ -24,7 +24,7 @@ class fileTextCounterKotlin {
     textCount.isVisible = true // make the frame visible
     selectFile.addActionListener(
         object : ActionListener {
-          override fun actionPerformed(e: ActionEvent) { // when button is clicked
+          override fun actionPerformed(e: ActionEvent) { // when the button is clicked
             val fileChooser = JFileChooser() // create a new file chooser
             fileChooser.fileFilter = FileNameExtensionFilter("Text files", "txt")
             val fileResult = fileChooser.showOpenDialog(textCount) // show file dialog
@@ -53,8 +53,7 @@ class fileTextCounterKotlin {
                     Characters: ${String.format("%,d", chars)}
                     Words: ${String.format("%,d", words)}
                     Lines: ${String.format("%,d", lines)}
-                    """
-                    .trimIndent() // update text counter output
+                    """.trimIndent() // update text counter output
           }
 
           @Throws(IOException::class)
@@ -71,7 +70,8 @@ class fileTextCounterKotlin {
             }
             return textContent
           }
-        })
+        }
+    )
   }
 
   companion object {

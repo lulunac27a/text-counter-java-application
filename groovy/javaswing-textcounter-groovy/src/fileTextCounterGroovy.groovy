@@ -20,7 +20,7 @@ class fileTextCounterGroovy {
         selectFile.addActionListener(new ActionListener() {
 
             @Override
-            void actionPerformed(ActionEvent e) { // when button is clicked
+            void actionPerformed(ActionEvent e) { // when the button is clicked
                 JFileChooser fileChooser = new JFileChooser()// create a new file chooser
                 fileChooser.fileFilter = new FileNameExtensionFilter('Text files', 'txt')
                 int fileResult = fileChooser.showOpenDialog(textCount)// show file dialog

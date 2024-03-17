@@ -19,7 +19,7 @@ public class fileTextCounter {
         textCount.setVisible(true);// make the frame visible
         selectFile.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {// when button is clicked
+            public void actionPerformed(ActionEvent e) {// when the button is clicked
                 JFileChooser fileChooser = new JFileChooser();// create a new file chooser
                 fileChooser.setFileFilter(new FileNameExtensionFilter("Text files", "txt"));
                 int fileResult = fileChooser.showOpenDialog(textCount);// show file dialog
