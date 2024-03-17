@@ -16,7 +16,7 @@ class GroovyFileTextCounterJavaFX extends Application {
 
     void start(Stage primaryStage) throws FileNotFoundException {
         FlowPane root = new FlowPane()
-        Scene scene = new Scene(root, 480, 320)// set the application size to 480x320
+        Scene scene = new Scene(root, 480, 400)// set the application size to 480x400
         Button selectFile = new Button('Select file')// select the file from the dialog box
         primaryStage.scene = scene// set the scene
         primaryStage.title = 'Text Counter Application'// set the title of stage

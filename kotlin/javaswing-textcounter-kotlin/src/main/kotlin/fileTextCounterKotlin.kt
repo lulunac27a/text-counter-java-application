@@ -16,7 +16,7 @@ class fileTextCounterKotlin {
     val textCount: Frame =
         JFrame("File Text Counter Application") // initialize frame and set title of frame
     textCount.layout = FlowLayout()
-    textCount.setSize(480, 320) // set application size to 480x320
+    textCount.setSize(480, 400) // set application size to 480x400
     textCount.add(selectFile) // add components to the frame
     textCountResult =
         JLabel("Characters: 0\nWords: 0\nLines: 0") // set the default text counter output

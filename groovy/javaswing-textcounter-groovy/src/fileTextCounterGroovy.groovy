@@ -12,7 +12,7 @@ class fileTextCounterGroovy {
     fileTextCounterGroovy() {
         Frame textCount = new JFrame('File Text Counter Application')// initialize frame and set title of frame
         textCount.layout = new FlowLayout()
-        textCount.setSize(480, 320)// set application size to 480x320
+        textCount.setSize(480, 400)// set application size to 480x400
         textCount.add(selectFile)// add components to the frame
         textCountResult = new JLabel('Characters: 0\nWords: 0\nLines: 0')// set the default text counter output
         textCount.add(textCountResult)

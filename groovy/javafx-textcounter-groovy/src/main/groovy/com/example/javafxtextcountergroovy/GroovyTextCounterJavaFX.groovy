@@ -16,7 +16,7 @@ class GroovyTextCounterJavaFX extends Application {
 
     void start(Stage primaryStage) {
         FlowPane root = new FlowPane()
-        Scene scene = new Scene(root, 480, 320)// set the application size to 480x320
+        Scene scene = new Scene(root, 480, 400)// set the application size to 480x400
         primaryStage.scene = scene// set the scene
         primaryStage.title = 'Text Counter Application'// set title of stage
         TextArea textContent = new TextArea()// text box area

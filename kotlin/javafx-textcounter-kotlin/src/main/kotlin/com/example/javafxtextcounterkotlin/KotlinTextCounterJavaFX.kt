@@ -13,7 +13,7 @@ import javafx.stage.Stage
 class KotlinTextCounterJavaFX : Application() {
   override fun start(primaryStage: Stage) {
     val root = FlowPane()
-    val scene = Scene(root, 480.0, 320.0) // set the application size to 480x320
+    val scene = Scene(root, 480.0, 400.0) // set the application size to 480x400
     primaryStage.scene = scene // set the scene
     primaryStage.title = "Text Counter Application" // set title of stage
     val textContent = TextArea() // text box area
@@ -24,14 +24,16 @@ class KotlinTextCounterJavaFX : Application() {
         EventHandler { event: ActionEvent? -> // calculate text count when button is clicked
           val chars: Int = textContent.length // get the length of text area in characters
           val words: Int =
-              textContent.text
+              textContent
+                  .text
                   .trim { it <= ' ' }
                   .split("\\s+".toRegex())
                   .dropLastWhile { it.isEmpty() }
                   .toTypedArray()
                   .size // get the length of text area in words
           val lines: Int =
-              textContent.text
+              textContent
+                  .text
                   .split("\\r?\\n".toRegex())
                   .dropLastWhile { it.isEmpty() }
                   .toTypedArray()
@@ -45,7 +47,10 @@ class KotlinTextCounterJavaFX : Application() {
                   String.format("%,d", lines) // update text counter output
     }
     root.children.addAll(
-        textContent, updateText, textCountResult) // add all components to the stage
+        textContent,
+        updateText,
+        textCountResult
+    ) // add all components to the stage
     primaryStage.show() // show the stage
   }
 

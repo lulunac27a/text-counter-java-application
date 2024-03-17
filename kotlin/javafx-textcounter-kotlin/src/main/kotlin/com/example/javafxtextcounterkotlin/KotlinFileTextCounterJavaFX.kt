@@ -15,7 +15,7 @@ class KotlinFileTextCounterJavaFX : Application() {
   @Throws(FileNotFoundException::class)
   override fun start(primaryStage: Stage) {
     val root = FlowPane()
-    val scene = Scene(root, 480.0, 320.0) // set the application size to 480x320
+    val scene = Scene(root, 480.0, 400.0) // set the application size to 480x400
     val selectFile = Button("Select file") // select the file from the dialog box
     primaryStage.scene = scene // set the scene
     primaryStage.title = "Text Counter Application" // set the title of stage
@@ -26,7 +26,8 @@ class KotlinFileTextCounterJavaFX : Application() {
       val fileChooser = FileChooser() // create a new file chooser
       fileChooser.title = "Select a file"
       fileChooser.extensionFilters.addAll(
-          FileChooser.ExtensionFilter("Text Files", "*.txt")) // choose .txt text files
+          FileChooser.ExtensionFilter("Text Files", "*.txt")
+      ) // choose .txt text files
       val fileSelected = fileChooser.showOpenDialog(null) // show file dialog
       if (fileSelected != null) {
         try {
@@ -71,7 +72,8 @@ class KotlinFileTextCounterJavaFX : Application() {
     @JvmStatic
     fun main(args: Array<String>) {
       launch(
-          KotlinFileTextCounterJavaFX::class.java) // launch the application by running the program
+          KotlinFileTextCounterJavaFX::class.java
+      ) // launch the application by running the program
     }
   }
 }

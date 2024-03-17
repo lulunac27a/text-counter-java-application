@@ -12,7 +12,7 @@ class textCounterGroovy {
     textCounterGroovy() {
         Frame textCount = new JFrame('Text Counter Application')// initialize frame and set title of frame
         textCount.layout = new FlowLayout()
-        textCount.setSize(480, 320)// set application size to 480x320
+        textCount.setSize(480, 400)// set application size to 480x400
         textContent = new JTextArea(10, 40)// create text area with 10 rows and 40 columns
         textCount.add(textContent)// add components to the frame
         updateText = new JButton('Calculate text count')

@@ -20,7 +20,7 @@ class GroovyFXMLFileTextCounterApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(
                 GroovyFXMLFileTextCounterApplication.class.getResource('fxml-file-text-counter-groovy.fxml'))// load FXML file
                                                                                                              // resource
-        Scene scene = new Scene(fxmlLoader.load() as Parent, 480, 320)// set application size to 480x320
+        Scene scene = new Scene(fxmlLoader.load() as Parent, 480, 400)// set application size to 480x400
         stage.title = 'Text Counter from a File'// set the title of stage
         stage.scene = scene// set the stage to a scene
         stage.show()// show the stage

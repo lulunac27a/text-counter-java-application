@@ -13,7 +13,7 @@ public class FXMLFileTextCounterApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(
                 FXMLFileTextCounterApplication.class.getResource("fxml-file-text-counter.fxml"));// load FXML file
                                                                                                  // resource
-        Scene scene = new Scene(fxmlLoader.load(), 480, 320);// set application size to 480x320
+        Scene scene = new Scene(fxmlLoader.load(), 480, 400);// set application size to 480x400
         stage.setTitle("Text Counter from a File");// set the title of stage
         stage.setScene(scene);// set the stage to a scene
         stage.show();// show the stage
