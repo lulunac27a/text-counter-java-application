@@ -1,4 +1,4 @@
-module com.example.javafxtextcounter {
+module com.example.javafxtextcountergroovy {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.apache.groovy;
