@@ -32,7 +32,7 @@ class KotlinFileTextCounterJavaFX : Application() {
             if (fileSelected != null) {
                 try {
                     BufferedReader(FileReader(fileSelected)).use { reader ->
-                        var line: String
+                        var line: String?
                         while ((reader.readLine().also { line = it }) != null) {
                             textContent += line + "\n" // read text from a file every line
                         }

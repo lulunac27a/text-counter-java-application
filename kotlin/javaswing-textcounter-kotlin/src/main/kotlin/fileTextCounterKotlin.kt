@@ -34,7 +34,8 @@ class fileTextCounterKotlin {
                         } catch (ex: IOException) {
                             throw RuntimeException(ex)
                         }
-                        val chars: Int = textContent.length // get the length of text area in characters
+                        val chars: Int =
+                                textContent.length // get the length of text area in characters
                         val words: Int =
                                 textContent
                                         .trim { it <= ' ' }
@@ -62,7 +63,7 @@ class fileTextCounterKotlin {
                         if (fileResult == JFileChooser.APPROVE_OPTION) {
                             val filePath = fileChooser.selectedFile.path // get the file path
                             BufferedReader(FileReader(filePath)).use { reader ->
-                                var line: String
+                                var line: String?
                                 while ((reader.readLine().also { line = it }) != null) {
                                     textContent += line + "\n" // read text from a file every line
                                 }

@@ -4,14 +4,15 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.io.IOException
 import javafx.event.ActionEvent
+import javafx.fxml.FXML
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.stage.FileChooser
 
 class KotlinFXMLFileTextCounterController {
-    var selectFile: Button? = null // button to select file
-    var textCountResult: Label? = null // text counter output result
-    var textContent: String = "" // initialize empty text content string
+    @FXML var selectFile: Button? = null // button to select file
+    @FXML var textCountResult: Label? = null // text counter output result
+    @FXML var textContent: String = "" // initialize empty text content string
 
     fun calculateTextCount(actionEvent: ActionEvent?) {
         var textContent = "" // initialize empty text content string
@@ -24,7 +25,7 @@ class KotlinFXMLFileTextCounterController {
         if (fileSelected != null) {
             try {
                 BufferedReader(FileReader(fileSelected)).use { reader ->
-                    var line: String
+                    var line: String?
                     while ((reader.readLine().also { line = it }) != null) {
                         textContent += line + "\n" // read text from file every line
                     }
