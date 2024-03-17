@@ -21,7 +21,7 @@ class GroovyFileTextCounterJavaFX extends Application {
         primaryStage.scene = scene// set the scene
         primaryStage.title = 'Text Counter Application'// set the title of stage
         Label textCountResult = new Label('Characters: 0\nWords: 0\nLines: 0')// set the default text counter output
-        selectFile.onAction((event) -> {
+        selectFile.onAction = (event) -> {
             String textContent = ''// initialize empty text content string
             FileChooser fileChooser = new FileChooser()// create a new file chooser
             fileChooser.setTitle('Select a file')
@@ -46,7 +46,7 @@ class GroovyFileTextCounterJavaFX extends Application {
             textCountResult.setText('Characters: ' + String.format('%,d', chars) + '\nWords: '
                     + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines))// update text counter
                                                                                               // output
-        })
+        }
         root.children.addAll(selectFile, textCountResult)// add all components to the stage
         primaryStage.show()// show the stage
     }
