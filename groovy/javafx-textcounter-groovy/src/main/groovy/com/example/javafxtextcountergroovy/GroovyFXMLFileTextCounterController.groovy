@@ -1,17 +1,21 @@
 package com.example.javafxtextcountergroovy
 
 import javafx.event.ActionEvent
+import javafx.fxml.FXML
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.stage.FileChooser
 
 class GroovyFXMLFileTextCounterController {
 
+    @FXML
     Button selectFile// button to select file
+    @FXML
     Label textCountResult// text counter output result
     static BufferedReader reader = null// initialize reader
     String textContent = ''// initialize empty text content string
 
+    @FXML
     void calculateTextCount(ActionEvent actionEvent) {
         String textContent = ''// initialize empty text content string
         FileChooser fileChooser = new FileChooser()// create a new file chooser
@@ -32,8 +36,7 @@ class GroovyFXMLFileTextCounterController {
         int chars = textContent.length()// get the length of opened text file in characters
         int words = textContent.trim().split('\\s+').length// get the length of opened text file in words
         int lines = textContent.trim().split('\\r?\\n').length// get the length of opened text file in lines
-        textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words)
-        + '\nLines: ' + String.format('%,d', lines)// update text counter output
+        textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text counter output
     }
 
 }

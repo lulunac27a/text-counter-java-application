@@ -22,14 +22,12 @@ class GroovyTextCounterJavaFX extends Application {
         TextArea textContent = new TextArea()// text box area
         Button updateText = new Button('Calculate text count')
         Label textCountResult = new Label('Characters: 0\nWords: 0\nLines: 0')// set to default text counter output
-        updateText.onAction((event) -> { // calculate text count when button is clicked
+        updateText.onAction = (event) -> { // calculate text count when button is clicked
             int chars = textContent.length// get the length of text area in characters
             int words = textContent.text.trim().split('\\s+').length// get the length of text area in words
             int lines = textContent.text.split('\\r?\\n').length// get the length of text area in lines
-            textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: '
-                    + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text counter
-                                                                                             // output
-        })
+            textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text counter output
+        }
         root.children.addAll(textContent, updateText, textCountResult)// add all components to the stage
         primaryStage.show()// show the stage
     }

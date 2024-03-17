@@ -33,9 +33,7 @@ class fileTextCounterGroovy {
                 int chars = textContent.length()// get the length of text area in characters
                 int words = textContent.trim().split('\\s+').length// get the length of text area in words
                 int lines = textContent.split('\\r?\\n').length// get the length of text area in lines
-                textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: '
-                + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text
-                                                                                         // counter output
+                textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text counter output
             }
 
             private static String getTextContent(int fileResult, JFileChooser fileChooser) throws IOException {

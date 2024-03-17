@@ -27,9 +27,7 @@ class textCounterGroovy {
                 int chars = textContent.text.length// get the length of text area in characters
                 int words = textContent.text.trim().split('\\s+').length// get the length of text area in words
                 int lines = textContent.text.split('\\r?\\n').length// get the length of text area in lines
-                textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: '
-                + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text
-                                                                                         // counter output
+                textCountResult.text = 'Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines)// update text counter output
             }
 
         })

@@ -43,9 +43,7 @@ class GroovyFileTextCounterJavaFX extends Application {
             int chars = textContent.length()// get the length of opened text file in characters
             int words = textContent.trim().split('\\s+').length// get the length of opened text file in words
             int lines = textContent.trim().split('\\r?\\n').length// get the length of opened text file in lines
-            textCountResult.setText('Characters: ' + String.format('%,d', chars) + '\nWords: '
-                    + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines))// update text counter
-                                                                                              // output
+            textCountResult.setText('Characters: ' + String.format('%,d', chars) + '\nWords: ' + String.format('%,d', words) + '\nLines: ' + String.format('%,d', lines))// update text counter output
         }
         root.children.addAll(selectFile, textCountResult)// add all components to the stage
         primaryStage.show()// show the stage
